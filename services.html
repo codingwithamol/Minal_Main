@@ -515,6 +515,182 @@
     }
     
 
+
+
+    .services-section {
+      max-width: 1200px;
+      margin-top: 100px;
+      /* margin-left: 150px; */
+    }
+
+    /* Buttons layout */
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+
+    .buttons-container button {
+      flex: 1 1 30%;
+      min-width: 100px;
+      padding: 12px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .buttons-container button.active {
+      background-color: #0056b3;
+    }
+
+    .service-content {
+      display: none;
+    }
+
+    .service-content.active {
+      display: block;
+    }
+
+    .service-row1 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .service-row1 .image {
+      flex: 1 1 40%;
+      padding: 10px;
+    }
+
+    .service-row1 .image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .service-row1 .description {
+      flex: 1 1 60%;
+      padding: 10px;
+      font-size: 1.3em;
+      line-height: 1.6;
+    }
+/* 
+    Scrolling images row
+    .scrolling-images {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      height: 150px;
+    }
+
+    .scrolling-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    .scrolling-track img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 10px;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    } */
+
+    @media (max-width: 768px) {
+      .service-row1 {
+        flex-direction: column;
+      }
+      .service-row1 .description {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .buttons-container button {
+        flex: 1 1 100%;
+      }
+    }
+
+
+    .image-carousel {
+  overflow: hidden;
+  width: 100%; /* or a fixed width if needed */
+  height: auto; /* adjust as per your image height */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* doubled due to image duplication */
+  animation: scroll-left 40s linear infinite;
+  margin-right: 20px;
+}
+
+.carousel-track img {
+  width: 15%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 20px; /* Adjust spacing between images */
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+.image-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.image-grid .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-grid .row img {
+  width: 30%; /* Adjust as needed for responsiveness */
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+
   </style>
 </head>
 <body>
@@ -638,6 +814,166 @@
     </nav>
   </header>
   <div class="page-wrapper">
+
+
+
+
+
+
+
+
+    <div class="services-section">
+      <!-- Buttons -->
+      <div class="buttons-container">
+        <button class="active" onclick="showService(0)">Fabrication</button>
+        <button onclick="showService(1)">Machining</button>
+        <button onclick="showService(2)">Casting</button>
+        <button onclick="showService(3)">Forging</button>
+        <button onclick="showService(4)"> leader cutting and blending</button>
+      </div>
+    
+      <!-- Service 1 -->
+      <div class="service-content active" id="service-0">
+        <div class="service-row1">
+          <div class="image">
+            <img src="images/background1.jpg" alt="Service 1">
+          </div>
+          <div class="description">
+            <h3>Service 1 Description</h3>
+            <p>This is a detailed description of Service 1. It offers amazing features and incredible benefits to users.</p>
+          </div>
+        </div>
+        <div class="image-grid">
+          <div class="row">
+            <img src="images/background1.jpg" alt="">
+            <img src="images/g1.jpg" alt="">
+            <img src="images/background2.jpg" alt="">
+          </div>
+          <div class="row">
+            <img src="images/background3.jpg" alt="">
+            <img src="images/background4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    
+      <!-- Service 2 -->
+      <div class="service-content" id="service-1">
+        <div class="service-row1">
+          <div class="image">
+            <img src="images/background2.jpg" alt="Service 2">
+          </div>
+          <div class="description">
+            <h3>Service 2 Description</h3>
+            <p>Service 2 provides comprehensive tools and smart solutions to boost your business.</p>
+          </div>
+        </div>
+        <div class="scrolling-images">
+          <div class="scrolling-track">
+            <img src="https://via.placeholder.com/200x140?text=2A">
+            <img src="https://via.placeholder.com/200x140?text=2B">
+            <img src="https://via.placeholder.com/200x140?text=2C">
+            <img src="https://via.placeholder.com/200x140?text=2D">
+            <img src="https://via.placeholder.com/200x140?text=2E">
+            <img src="https://via.placeholder.com/200x140?text=2A">
+            <img src="https://via.placeholder.com/200x140?text=2B">
+          </div>
+        </div>
+      </div>
+    
+      <!-- Service 3 -->
+      <div class="service-content" id="service-2">
+        <div class="service-row1">
+          <div class="image">
+            <img src="images/background3.jpg" alt="Service 3">
+          </div>
+          <div class="description">
+            <h3>Service 3 Description</h3>
+            <p>With advanced analytics and user-friendly tools, Service 3 supports smarter decision-making.</p>
+          </div>
+        </div>
+        <div class="scrolling-images">
+          <div class="scrolling-track">
+            <img src="https://via.placeholder.com/200x140?text=3A">
+            <img src="https://via.placeholder.com/200x140?text=3B">
+            <img src="https://via.placeholder.com/200x140?text=3C">
+            <img src="https://via.placeholder.com/200x140?text=3D">
+            <img src="https://via.placeholder.com/200x140?text=3E">
+            <img src="https://via.placeholder.com/200x140?text=3A">
+            <img src="https://via.placeholder.com/200x140?text=3B">
+          </div>
+        </div>
+      </div>
+    
+      <!-- Service 4 -->
+      <div class="service-content" id="service-3">
+        <div class="service-row1">
+          <div class="image">
+            <img src="images/background4.jpg" alt="Service 4">
+          </div>
+          <div class="description">
+            <h3>Service 4 Description</h3>
+            <p>This service focuses on innovation and support for scalable growth and tech adoption.</p>
+          </div>
+        </div>
+        <div class="scrolling-images">
+          <div class="scrolling-track">
+            <img src="https://via.placeholder.com/200x140?text=4A">
+            <img src="https://via.placeholder.com/200x140?text=4B">
+            <img src="https://via.placeholder.com/200x140?text=4C">
+            <img src="https://via.placeholder.com/200x140?text=4D">
+            <img src="https://via.placeholder.com/200x140?text=4E">
+            <img src="https://via.placeholder.com/200x140?text=4A">
+            <img src="https://via.placeholder.com/200x140?text=4B">
+          </div>
+        </div>
+      </div>
+    
+      <!-- Service 5 -->
+      <div class="service-content" id="service-4">
+        <div class="service-row1">
+          <div class="image">
+            <img src="images/Manil logo final.png" alt="Service 5">
+          </div>
+          <div class="description">
+            <h3>Service 5 Description</h3>
+            <p>Service 5 is designed to empower users with accessible solutions and top-tier performance.</p>
+          </div>
+        </div>
+        <div class="image-carousel">
+          <div class="carousel-track">
+          
+            <img src="images/background1.jpg" alt="">
+            <img src="images/background2.jpg" alt="">
+            <img src="images/background3.jpg" alt="">
+            <img src="images/background4.jpg" alt="">
+        
+         
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+    
+    <script>
+      function showService(index) {
+        const services = document.querySelectorAll('.service-content');
+        const buttons = document.querySelectorAll('.buttons-container button');
+    
+        services.forEach(service => service.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+    
+        document.getElementById(`service-${index}`).classList.add('active');
+        buttons[index].classList.add('active');
+      }
+    </script>
+    
+
+
+
+
+
+    
  
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
