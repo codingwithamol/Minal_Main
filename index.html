@@ -197,12 +197,13 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: black !important;
+        background: rgb(180, 198, 225);
+        color: white !important;
         display: none;
         flex-direction: column;
         min-width: 180px;
         z-index: 999;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
       }
 
       .dropdown:hover .dropdown-menu,
@@ -673,10 +674,11 @@
           <li class="dropdown">
             <a href="services.html" id="servicesToggle">Services <span id="arrow">▼</span></a>
             <ul class="dropdown-menu" id="servicesDropdown">
-              <li><a href="#">S1</a></li>
-              <li><a href="#">S2</a></li>
-              <li><a href="#">S3</a></li>
-              <li><a href="#">S4</a></li>
+              <li><a href="services.html?service=0">S1</a></li>
+              <li><a href="services.html?service=1">S2</a></li>
+              <li><a href="services.html?service=2">S3</a></li>
+              <li><a href="services.html?service=3">S4</a></li>
+              <li><a href="services.html?service=4">S5</a></li>
             </ul>
           </li>
           <li><a href="Certificates.html">Certificates</a></li>
