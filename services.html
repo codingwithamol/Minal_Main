@@ -626,8 +626,13 @@
       .buttons-container button {
         flex: 1 1 100%;
       }
+      
+.scroll-images img {
+  width: 200px !important;
+  height: 200px !important;
+  
+}
     }
-
 
     .image-carousel {
   overflow: hidden;
@@ -660,13 +665,6 @@
     transform: translateX(-50%);
   }
 }
-
-
-
-
-
-
-
 .image-grid {
   width: 100%;
   display: flex;
@@ -674,7 +672,6 @@
   gap: 20px;
   padding: 10px 0;
 }
-
 .image-grid .row {
   display: flex;
   justify-content: center;
@@ -690,7 +687,36 @@
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
+.scroll-container {
+  width: 100%;
+  overflow: hidden !important;
+  white-space: nowrap;
+  margin: 20px;
+}
 
+.scroll-images {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+.scroll-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+ 
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 
   </style>
@@ -869,15 +895,21 @@
             <p>Service 2 provides comprehensive tools and smart solutions to boost your business.</p>
           </div>
         </div>
-        <div class="scrolling-images">
-          <div class="scrolling-track">
-            <img src="https://via.placeholder.com/200x140?text=2A">
-            <img src="https://via.placeholder.com/200x140?text=2B">
-            <img src="https://via.placeholder.com/200x140?text=2C">
-            <img src="https://via.placeholder.com/200x140?text=2D">
-            <img src="https://via.placeholder.com/200x140?text=2E">
-            <img src="https://via.placeholder.com/200x140?text=2A">
-            <img src="https://via.placeholder.com/200x140?text=2B">
+        <div class="scroll-container">
+          <div class="scroll-images">
+            <!-- Repeat images for seamless scrolling -->
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Nature-Backgrounds-Images-Download.jpg" alt="img1">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img2">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img3">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img4">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/landscape-wallpaper-hd-backgrounds.jpg" alt="img5">
+            
+            <!-- Duplicate for infinite effect -->
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Nature-Backgrounds-Images-Download.jpg" alt="img1">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img2">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img3">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img4">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/landscape-wallpaper-hd-backgrounds.jpg" alt="img5">
           </div>
         </div>
       </div>
@@ -917,7 +949,7 @@
             <p>This service focuses on innovation and support for scalable growth and tech adoption.</p>
           </div>
         </div>
-        <div class="scrolling-images">
+        <!-- <div class="scrolling-images">
           <div class="scrolling-track">
             <img src="https://via.placeholder.com/200x140?text=4A">
             <img src="https://via.placeholder.com/200x140?text=4B">
@@ -926,6 +958,23 @@
             <img src="https://via.placeholder.com/200x140?text=4E">
             <img src="https://via.placeholder.com/200x140?text=4A">
             <img src="https://via.placeholder.com/200x140?text=4B">
+          </div>
+        </div> -->
+        <div class="scroll-container">
+          <div class="scroll-images">
+            <!-- Repeat images for seamless scrolling -->
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Nature-Backgrounds-Images-Download.jpg" alt="img1">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img2">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img3">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img4">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/landscape-wallpaper-hd-backgrounds.jpg" alt="img5">
+            
+            <!-- Duplicate for infinite effect -->
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Nature-Backgrounds-Images-Download.jpg" alt="img1">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img2">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img3">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.vlFp_jWM3fklHxAHuX1MyAHaEo&pid=Api&P=0&h=180" alt="img4">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/landscape-wallpaper-hd-backgrounds.jpg" alt="img5">
           </div>
         </div>
       </div>
