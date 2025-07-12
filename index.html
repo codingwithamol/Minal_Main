@@ -629,7 +629,38 @@
       backdrop-filter: blur(5px);
       /* Blur effect */
     }
-   
+     .mission-vision-card {
+    transition: all 0.3s ease;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    height: 100%;
+  }
+
+  .mission-vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #f0f8ff;
+  }
+
+  .mission-vision-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+  }
+
+  .mission-vision-text {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  @media (max-width: 767.98px) {
+    .mission-vision-title {
+      font-size: 1.3rem;
+    }
+  }
   </style>
 </head>
 
@@ -818,7 +849,63 @@
     </div>
 
 </div> -->
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="text-center col-md-12 mb-1 mt-3">
+    <h2 class="fw-bold" style="color: #0d6efd;">About Us </h2>
+    <p class="text-muted" style="max-width: 700px; margin: 0 auto;">
+      Trusted for precision. Driven by quality. Backed by experience.
+    </p>
+  </div>
+        <div class="col-md-6">
+          <img src="images/background3.jpg" alt="About Us" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6 mt-5">
+          <h2 class=""> Manil Engineers</h2>
 
+          <p>Manil Engineers is an ISO 9001:2015 certified company with over 10 years of experience delivering high-quality engineering solutions across multiple industrial sectors. We specialize in valve and pump components, oil & gas components, flanges, wear rings, pump stools, and offer comprehensive fabrication and precision machining services.
+Backed by a skilled team and advanced manufacturing capabilities, we work with a wide range of materials including stainless steel, carbon steel, copper alloys, and super duplex. Our commitment to quality, reliability, and on-time delivery has made us a trusted partner for clients across the chemical, petrochemical, refinery, and process industries.
+At Manil Engineers, we focus on engineering excellence that adds real value—delivering components and services that meet the highest performance and safety standards.
+</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Mission & Vision Row -->
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Mission -->  <!-- Section Heading -->
+  <div class="text-center col-md-12 mb-5">
+    <h2 class="fw-bold text-center" style="color: #0d6efd;">Our Mission & Vision</h2>
+    <p class="text-muted text-center" style="max-width: 700px; margin: 0 auto;">
+      We are committed to delivering innovative engineering solutions and shaping a sustainable future across critical industries.
+    </p>
+  </div>
+    <div class="col-md-6">
+      <div class="mission-vision-card h-100">
+        <div class="mission-vision-title">Our Mission</div>
+        <div class="mission-vision-text">
+          To provide world-class fabrication, machining, and sheet metal solutions with a focus on quality, innovation, and customer satisfaction, while supporting sustainable industrial growth across the sectors we serve.
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision -->
+    <div class="col-md-6">
+      <div class="mission-vision-card h-100">
+        <div class="mission-vision-title">Our Vision</div>
+        <div class="mission-vision-text">
+          To be a premier Indian engineering company recognized for our excellence in turnkey fabrication, CNC VMC machining, sheet metal processing, and our commitment to serving critical industries including chemical, oil & gas, valve, pump, and defence.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Client Carousel Section -->
     <section class="client-section text-center">
       <div class="container">
@@ -932,10 +1019,6 @@
         </div>
       </div>
     </section>
-
-
-
-
 
 
     <div class="customer-section">
