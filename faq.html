@@ -601,7 +601,22 @@
       backdrop-filter: blur(5px);
       /* Blur effect */
     }
-    
+     @media (max-width: 768px) {
+  #navMenu {
+    font-weight: bold;
+    width: 280px;
+    max-height: auto;       /* Limits the height of the menu */
+    overflow-y: auto;       /* Enables vertical scroll if content exceeds height */
+    padding-right: 0px;    /* Avoids clipping when scrollbar appears */
+  }
+#navMenu li a {
+    display: block;
+    padding: 10px;
+    font-weight: bold;        /* Make text bold */
+    white-space: normal;      /* Allow text to wrap */
+    word-break: break-word;   /* Break long words if needed */
+  }
+}
 
     
   </style>
@@ -646,11 +661,12 @@
           <li><a href="aboutus.html">About Us</a></li>
           <li class="dropdown">
             <a href="services.html" id="servicesToggle">Services <span id="arrow">▼</span></a>
-            <ul class="dropdown-menu" id="servicesDropdown">
-              <li><a href="#">S1</a></li>
-              <li><a href="#">S2</a></li>
-              <li><a href="#">S3</a></li>
-              <li><a href="#">S4</a></li>
+           <ul class="dropdown-menu" id="servicesDropdown">
+              <li><a href="services.html?service=0">Custom Fabrication</a></li>
+              <li><a href="services.html?service=1">CNC & VMC Machining</a></li>
+              <li><a href="services.html?service=2">Laser Cutting & CNC Bending</a></li>
+              <li><a href="services.html?service=3">Welding & Modular Assembly</a></li>
+              <li><a href="services.html?service=4">Heavy Equipment Machining</a></li>
             </ul>
           </li>
           <li><a href="Certificates.html">Certificates</a></li>
