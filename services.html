@@ -527,29 +527,64 @@
     }
 
     /* Buttons layout */
-    .buttons-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 30px;
-      gap: 10px;
-    }
+   .buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
 
-    .buttons-container button {
-      flex: 1 1 30%;
-      min-width: 100px;
-      padding: 12px 20px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+.buttons-container button {
+  flex: 0 1 auto;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #b2d6fd, #003a78);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-    .buttons-container button.active {
-      background-color: #0056b3;
-    }
+.buttons-container button:hover {
+  background: linear-gradient(135deg, #4fa4ff, #009459);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buttons-container button.active {
+  background: #012245;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buttons-container button {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-container button {
+    flex: 1 1 100%;
+    width: 90%;
+  }
+}
+
 
     .service-content {
       display: none;
@@ -623,10 +658,10 @@
       }
     }
 
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
       .buttons-container button {
         flex: 1 1 100%;
-      }
+      } */
       
 .scroll-images img {
   width: 150px !important;
@@ -872,22 +907,22 @@
     <div class="services-section">
       <!-- Buttons -->
       <div class="buttons-container">
-        <button class="active" onclick="showService(0)">Fabrication</button>
-        <button onclick="showService(1)">Machining</button>
-        <button onclick="showService(2)">Casting</button>
-        <button onclick="showService(3)">Forging</button>
-        <button onclick="showService(4)"> leader cutting and blending</button>
+        <button class="active" onclick="showService(0)">Custom Fabrication</button>
+        <button onclick="showService(1)">CNC & VMC Machining</button>
+        <button onclick="showService(2)">Laser Cutting & CNC Bending</button>
+        <button onclick="showService(3)">Welding & Modular Assembly</button>
+        <button onclick="showService(4)">Heavy Equipment Machining</button>
       </div>
     
       <!-- Service 1 -->
       <div class="service-content active" id="service-0">
         <div class="service-row1">
           <div class="image">
-            <img src="images/background1.jpg" alt="Service 1">
+            <img src="images/Custom Fabrication.jpg" alt="Service 1">
           </div>
           <div class="description">
-            <h3>Service 1 Description</h3>
-            <p>This is a detailed description of Service 1. It offers amazing features and incredible benefits to users.</p>
+            <h3>Custom Fabrication</h3>
+            <p>High-precision fabrication services for industrial structures and assemblies using stainless steel, carbon steel, and super duplex. We deliver reliable, application-ready components for industries like oil & gas, chemical, and heavy engineering.</p>
           </div>
         </div>
         <div class="scroll-container">
@@ -911,12 +946,11 @@
       <div class="service-content" id="service-1">
         <div class="service-row1">
           <div class="image">
-            <img src="images/background2.jpg" alt="Service 2">
+            <img src="images/CNC & VMC Machining.jpg" alt="Service 2">
           </div>
           <div class="description">
-            <h3>Service 2 Description</h3>
-            <p>Service 2 provides comprehensive tools and smart solutions to boost your business.</p>
-          </div>
+            <h3>CNC & VMC Machining</h3>
+<p>Advanced CNC and VMC machining for precision-engineered parts. We specialize in close-tolerance machining for complex geometries, ensuring consistency and quality in every batch.</p>          </div>
         </div>
         <div class="scroll-container">
           <div class="scroll-images">
@@ -939,12 +973,11 @@
       <div class="service-content" id="service-2">
         <div class="service-row1">
           <div class="image">
-            <img src="images/background3.jpg" alt="Service 3">
+            <img src="images/Laser Cutting & CNC Bending.jpg" alt="Service 3">
           </div>
           <div class="description">
-            <h3>Service 3 Description</h3>
-            <p>With advanced analytics and user-friendly tools, Service 3 supports smarter decision-making.</p>
-          </div>
+            <h3>Laser Cutting & CNC Bending</h3>
+<p>Accurate and clean cutting using high-powered laser systems, paired with CNC press brake bending for precise profiles. Ideal for sheet metal components, enclosures, and support structures.</p>          </div>
         </div>
         <div class="scroll-container">
           <div class="scroll-images">
@@ -967,12 +1000,11 @@
       <div class="service-content" id="service-3">
         <div class="service-row1">
           <div class="image">
-            <img src="images/background4.jpg" alt="Service 4">
+            <img src="images/Welding & Modular Assembly.jpg" alt="Service 4">
           </div>
           <div class="description">
-            <h3>Service 4 Description</h3>
-            <p>This service focuses on innovation and support for scalable growth and tech adoption.</p>
-          </div>
+            <h3>Welding & Modular Assembly</h3>
+<p>We offer expert TIG, MIG, and ARC welding along with modular and mechanical assembly of fabricated or machined parts. Our capabilities support complete sub-assemblies and fabrication units that are structurally sound, aligned, and ready for installation.</p>          </div>
         </div>
         <!-- <div class="scrolling-images">
           <div class="scrolling-track">
@@ -1006,12 +1038,11 @@
       <div class="service-content" id="service-4">
         <div class="service-row1">
           <div class="image">
-            <img src="images/Manil logo final.png" alt="Service 5">
+            <img src="images/Heavy Equipment Machining.jpg" alt="Service 5">
           </div>
           <div class="description">
-            <h3>Service 5 Description</h3>
-            <p>Service 5 is designed to empower users with accessible solutions and top-tier performance.</p>
-          </div>
+            <h3>Heavy Equipment Machining</h3>
+<p>Expanding into large-format machining, we are equipped to handle heavy-duty components for the oil & gas, infrastructure, and power sectors. Our setup supports high-weight, oversized parts such as flanges, pump housings, motor stools, and custom machined bases.</p>          </div>
         </div>
         <div class="scroll-container">
           <div class="scroll-images">
